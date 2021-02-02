@@ -9,8 +9,7 @@ DATA = "cnsfails202101a.txt"
 
 # define checks
 CHECKS = [
-	"f2d_100000",				# 1) number of fails-to-deliver > 100,000
-	"value_f2d_1000000"			# 2) number of fails-to-deliver * price > 1,000,000
+	"f2d_100000",				# 1) number of fails-to-deliver existing on the recorded day > 100,000
 ]
 
 
@@ -28,9 +27,10 @@ if __name__ == "__main__":
 	for f in files:
 		f.write(line)
 
-	# iterate over all other lines in DATA, writing lines to files appropriately
+	# iterate over all other lines in DATA
 	for line in f_data:
 		parsed_line = line[:-1].split("|") # ignore trailing \n in split
+		# apply each check to each entry in the data file
 		for i in range(len(CHECKS)): 
 			try:
 				passed = False # store if line passes the current check
@@ -38,10 +38,6 @@ if __name__ == "__main__":
 				if CHECKS[i] == "f2d_100000": # 1)
 					if int(parsed_line[3]) > 100000:
 						passed = True
-
-				if CHECKS[i] == "value_f2d_1000000": # 2)
-						if int(parsed_line[3]) * float(parsed_line[5]) > 1000000:
-							passed = True
 
 				if passed: # line passed current check, write to corresponding file
 					files[i].write(line)

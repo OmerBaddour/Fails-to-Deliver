@@ -10,8 +10,7 @@ The current data file is cnsfails202101a.txt.
 Usage:
 
 $ python f2d_checks.py
-$ python f2d_stats.py
-$ sort_tvbs.py
+$ python f2d_per_ticker.py GME
 
 To delete all outputted textfiles by Python programs except this README and the
 data, in a bash shell, type:
@@ -22,26 +21,17 @@ $ find *.txt \! -name README.txt \! -name cnsfails202101a.txt -delete
 
 f2d_checks.py:
 
-Outputs f2d_100000.txt and value_f2d_1000000.txt
+Carries out checks on the entries in the data file, and outputs files
+containing entries corresponding to each check.
 
-f2d_100000.txt: Entries in the data file which have more than 100,000 fails-to-
-deliver.
-
-value_f2d_1000000.txt: Entries in the data file which have more than 1,000,000
-dollars worth of value (roughly - see link for precise meaning) in fails-to-
-deliver.
+Check 1): number of fails-to-deliver existing on the recorded day > 100,000
+	* Output in f2d_100000.txt 
 
 --------------------------------------------------------------------------------
 
-f2d_stats.py:
+f2d_per_ticker.py:
 
-Outputs total_value_by_symbol.txt: Sum of fails-to-deliver * value, for each
-symbol (since there are multiple entries in the original data per symbol)
-
---------------------------------------------------------------------------------
-
-sort_tvbs.py
-
-Outputs sorted_tvbs.txt: Sorted total_value_by_symbol.txt by value.
+Outputs a graph of the total fails-to-deliver on the listed days in the data
+file, for a supplied ticker symbol.
 
 --------------------------------------------------------------------------------
