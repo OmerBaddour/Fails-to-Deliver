@@ -1,12 +1,21 @@
 --------------------------------------------------------------------------------
 
 This directory contains data from https://www.sec.gov/data/foiadocsfailsdatahtm,
-and programs that extract useful data.
+and programs that extract useful data. The programs are written in Python 3.
 
 The current data file is cnsfails202101a.txt.
 
+--------------------------------------------------------------------------------
+
+Usage:
+
+$ python f2d_checks.py
+$ python f2d_stats.py
+$ sort_tvbs.py
+
 To delete all outputted textfiles by Python programs except this README and the
 data, in a bash shell, type:
+
 $ find *.txt \! -name README.txt \! -name cnsfails202101a.txt -delete
 
 --------------------------------------------------------------------------------
