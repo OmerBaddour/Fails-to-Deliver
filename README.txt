@@ -10,7 +10,7 @@ The current data file is cnsfails202101a.txt.
 Usage:
 
 $ python f2d_checks.py
-$ python f2d_per_ticker.py GME
+$ python f2d_per_ticker.py <ticker_symbol>
 
 To delete all outputted textfiles by Python programs except this README and the
 data, in a bash shell, type:
