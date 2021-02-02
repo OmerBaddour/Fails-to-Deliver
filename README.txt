@@ -5,6 +5,10 @@ and programs that extract useful data.
 
 The current data file is cnsfails202101a.txt.
 
+To delete all outputted textfiles by Python programs except this README and the
+data, in a bash shell, type:
+$ find *.txt \! -name README.txt \! -name cnsfails202101a.txt -delete
+
 --------------------------------------------------------------------------------
 
 f2d_checks.py:
