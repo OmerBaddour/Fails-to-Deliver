@@ -32,6 +32,6 @@ Check 1): number of fails-to-deliver existing on the recorded day > 100,000
 f2d_per_ticker.py:
 
 Outputs a graph of the total fails-to-deliver on the listed days in the data
-file, for a supplied ticker symbol.
+file, for a given ticker symbol.
 
 --------------------------------------------------------------------------------
