@@ -3,7 +3,7 @@
 This directory contains data from https://www.sec.gov/data/foiadocsfailsdatahtm,
 and programs that extract useful data. The programs are written in Python 3.
 
-The current data file is cnsfails202101a.txt.
+The current data file is cnsfails202101b.txt.
 
 --------------------------------------------------------------------------------
 

@@ -9,7 +9,7 @@ import sys
 import matplotlib.pyplot as plt
 
 # filepath to data
-DATA = "cnsfails202101a.txt"
+DATA = "cnsfails202101b.txt"
 
 
 if __name__ == "__main__":

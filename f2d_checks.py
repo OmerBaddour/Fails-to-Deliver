@@ -5,7 +5,7 @@ Source: https://www.sec.gov/data/foiadocsfailsdatahtm
 """
 
 # filepath to data
-DATA = "cnsfails202101a.txt"
+DATA = "cnsfails202101b.txt"
 
 # define checks
 CHECKS = [
